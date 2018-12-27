@@ -1,4 +1,4 @@
-let topics = ["acura", "bmw", "mercedes", "lexus", "audi", "land rover", "ferrari", "lamborghini", "infiniti"];
+let topics = ["acura", "bmw", "mercedes-benz", "lexus", "audi", "land rover", "ferrari", "lamborghini", "infiniti"];
 let giphys;
 
 function displayTopicButtons(carMakesArray) {
@@ -18,18 +18,22 @@ function displayGiphys(giphys) {
     giphys.forEach(function(giph) {
         var stillPic = giph.images.downsized_still.url;
         var animatePic = giph.images.downsized_medium.url;
+        var imgHeight = giph.images.downsized_still.height;
+        var imgWidth = giph.images.downsized_still.width;
+        var newParagraph = $('<p class="giph-box">');
         var image = $('<img>');
-        var rating = $('<p class="giph-box">');
+        var rating = $('<div>');
 
-        rating.html("Rating: " + giph.rating + "<br>");
+        rating.html("Rating: " + giph.rating);
         image.addClass('giph-image');
         image.attr('src', stillPic);
         image.attr('data-still', stillPic);
         image.attr('data-animate', animatePic);
         image.attr('data-state', 'still')
+        image.attr('style', "height:" + imgHeight + "px;width:" + imgWidth + "px;")
 
-        rating.append(image);
-        $('.pictures').append(rating);
+        newParagraph.append(image).append(rating);
+        $('.pictures').append(newParagraph);
     });
 }
 
