@@ -1,0 +1,17 @@
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.giph-box {
+    margin: 10px;
+}
+
+.car-make {
+    margin: 5px;
+}
+
+.add-form {
+    margin: 5px;
+    margin-bottom: 75px;
+}
