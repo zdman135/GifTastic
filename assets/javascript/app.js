@@ -1,5 +1,4 @@
 let topics = ["acura", "bmw", "mercedes-benz", "lexus", "audi", "land rover", "ferrari", "lamborghini", "infiniti"];
-let giphys;
 
 function displayTopicButtons(carMakesArray) {
     carMakesArray.forEach(function(carMake) {
