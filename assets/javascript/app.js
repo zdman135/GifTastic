@@ -83,5 +83,6 @@ $('.add-button').on("click", function(e) {
         topics.push(userCarBrand);
         $('.topics').empty();        
         displayTopicButtons(topics);
+        $('.add-carmake').val("");
     }
 });
